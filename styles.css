@@ -11,10 +11,11 @@
     --secondary-color: #ABABAB;
     --accent-color: #DCF8F7;
     --background-color: #ffffff;
+    --secondary-background-color: #e5faf8;
     --card-color-1: #00CCB1;
     --card-color-2: #3D83DF;
     --card-color-3: #1B2734;
-    --text-color: #667070;;
+    --text-color: #667070;
     --secondary-text-color: #00C3A5;
     --tertiary-text-color: #ffffff;
 }
@@ -137,6 +138,7 @@ h1, h2, h3, h4 {
   flex: 1 1 calc(33.333% - 1rem);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  cursor: pointer;
   /* text-align: center; */
 }
 .card-1 i, .card-2 i, .card-3 i {
@@ -149,17 +151,27 @@ h1, h2, h3, h4 {
     display: block;
     font-size: 1.5rem;
     font-weight: 500;
+    margin: .3em 0;
     margin-bottom: 1rem;
 }
+.card-1 p, .card-2 p, .card-3 p {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.2;
+  padding-bottom: 4rem;
+}
 .card-1 button, .card-2 button, .card-3 button {
-    background-color: var(--tertiary-text-color);
+    background-color: var(--background-color);
     justify-items: end;
     color: var(--text-color);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
+    font-size: large;
+    color: var(--text-color);
     transition: background-color 0.3s ease;
+
 }
 .card-1 button:hover, .card-2 button:hover, .card-3 button:hover {
     background-color: var(--accent-color);
@@ -167,4 +179,351 @@ h1, h2, h3, h4 {
 .button-container {
   display: flex;
   justify-content: flex-end;
+}
+.services-brands {
+    max-width: 1015px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+}
+
+.services-brands h1 {
+    font-size: 2.15rem;
+    text-align: left;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    line-height: 2.8rem;
+    width: 30%;
+}
+.services-brands ul {
+  display: flex;
+  width: 70%;
+  padding-left: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.brands__logos {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.brands__logos li {
+    flex: 0 0 calc(25% - 2rem); /* 4 items per row accounting for gap */
+    max-width: calc(25% - 2rem);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.brands__logos li a {
+    display: block;
+    transition: opacity 0.3s ease;
+    padding: 0;
+}
+.brands__logos li a:hover {
+    opacity: 0.8;
+}
+
+.brands__logos li svg {
+    max-width: 100%;
+    height: auto;
+}
+.brands__logos li svg path {
+    fill: var(--text-color);
+    transition: fill 0.3s ease;
+}
+
+.brands__logos li a:hover svg path {
+    fill: var(--primary-color); 
+}
+
+.brands__logos li img {
+    max-height: 32px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.brands__logos li.jameda img,
+.brands__logos li.tuotempo img,
+.brands__logos li.gipo img,
+.brands__logos li.clinicloud img,
+.brands__logos li.mydr img {
+    max-height: 32px;
+}
+/* Stats Section Styling */
+.stats-section {
+  background-color: var(--secondary-background-color);
+  padding: 4rem 0;
+  background-image: linear-gradient(-45deg, #00ccb103 5%, #3dc7df1a);
+  position: relative; /* Make stats-section the positioning context */
+  overflow: hidden; /* Ensure content doesn’t overflow */
+}
+
+.stats-container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1015px;
+  padding: 0 2rem;
+  gap: 4rem;
+  position: relative;
+  z-index: 2; 
+}
+
+.stats-img {
+  background: url(./Assets/big-logo.png) no-repeat;
+  height: 350px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 350px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Style for stats-background to avoid conflicts */
+.stats-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; 
+}
+
+.stats-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.5; 
+}
+
+.stats-header {
+  width: 40%;
+  padding-top: 2rem;
+}
+
+.stats-header h1 {
+  color: var(--primary-color);
+  font-size: 2.125rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.stats-header p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.stats-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.stats-item-1,
+.stats-item-2 {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 20rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stats-item-2 {
+  margin-top: -1.5rem;
+}
+
+.stats-item-1 {
+  margin-bottom: 1.5rem;
+}
+
+.stats-item-1:hover,
+.stats-item-2:hover {
+  transform: translateY(-5px);
+}
+
+.stats-item-1 img,
+.stats-item-2 img {
+  height: 40px;
+  margin-bottom: 1.5rem;
+}
+
+.stats-item-1 h3,
+.stats-item-2 h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stats-item-1 p,
+.stats-item-2 p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+/* Offices Section */
+.offices-section {
+  max-width: 1015px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.offices-section > div:first-child {
+  margin-bottom: 2rem;
+}
+
+.offices-section h1 {
+  color: #00C3A5;
+  font-size: 2.15rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-family: Work Sans, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.offices-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #667070;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.offices-section > div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.offices-section > div:nth-child(2) > div {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 250px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.offices-section > div:nth-child(2) > div:hover {
+  transform: translateY(-5px);
+}
+
+.offices-section figure {
+  margin: 0;
+}
+
+.offices-section img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.offices-section > div:nth-child(2) > div > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.offices-section > div:nth-child(2) > div > div span:first-child {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #00C3A5;
+}
+
+.offices-section > div:nth-child(2) > div > div span:last-child {
+  font-size: 1rem;
+  color: #667070;
+  text-decoration: underline;
+}
+
+.offices-section a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.office-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.office-info span:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.office-info span:nth-child(2) {
+  font-size: 1 rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.offices-header {
+  max-width: 460px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+.final-section {
+  max-width: 1015px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+.final-section p {
+  font-size: 2.15rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+.openings-btn {
+  background-color: var(--primary-color);
+  color: var(--tertiary-text-color);
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 4rem ;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.openings-btn:hover {
+  background-color: var(--card-color-3);
+  color: var(--secondary-text-color);
+  transition: background-color 0.3s ease;
+}
+.footer {
+  background-color: var(--secondary-background-color);
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+.footer a {
+  color: var(--card-color-3);
+  text-decoration: none;
+}
+.footer a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
