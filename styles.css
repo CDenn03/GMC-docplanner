@@ -1,0 +1,170 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom properties for color scheme */
+:root {
+    --primary-color: #00C3A5;
+    --secondary-color: #ABABAB;
+    --accent-color: #DCF8F7;
+    --background-color: #ffffff;
+    --card-color-1: #00CCB1;
+    --card-color-2: #3D83DF;
+    --card-color-3: #1B2734;
+    --text-color: #667070;;
+    --secondary-text-color: #00C3A5;
+    --tertiary-text-color: #ffffff;
+}
+
+/* Body styles with scrolling enabled */
+body {
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-y: auto;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    display: block;
+}
+h1, h2, h3, h4 {
+    font-family: Work Sans, Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: -.3px;
+    margin: 1em 0;
+}
+
+/* navbar */
+.main-nav {
+  background-color: var(--background-color);
+  display: relative;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.nav-container {
+  background-color: var(--background-color);
+  display: flex;
+  margin: auto;
+  padding: 1.5rem;
+  margin: 0 auto;
+  max-width: 1015px;
+  z-index: 3;
+
+}
+.doc-logo {
+  height: 33px;
+  width: 268px;
+}
+.nav-links {
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 2em;
+  list-style: none;
+}
+.nav-links li {
+  margin: 0 1.5rem;
+}
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero sections styling */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1015px;
+  margin: 2.0625rem auto 3.75rem;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.hero-section h1 {
+  text-align: center;
+  font-size: 2.15rem;
+  color: var(--primary-color);
+}
+.hero-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.hero-text p {
+  width: 50%;
+  padding: 10px;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+.hero-text p a {
+  color: #3d83df;
+  outline: 0;
+  text-decoration: none;
+}
+
+/* Services Section Styling */
+.services-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1015px;
+  margin: 2.0625rem auto 3.75rem;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card-1 ,.card-2, .card-3 {
+  background-color: var(--card-color-1);
+  color: var(--tertiary-text-color);
+  padding: 1.5rem;
+  margin: 0.5rem;
+  flex: 1 1 calc(33.333% - 1rem);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* text-align: center; */
+}
+.card-1 i, .card-2 i, .card-3 i {
+  font-size: 1.5 rem;
+  color: var(--tertiary-text-color);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.card-1 span, .card-2 span, .card-3 span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.card-1 button, .card-2 button, .card-3 button {
+    background-color: var(--tertiary-text-color);
+    justify-items: end;
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.card-1 button:hover, .card-2 button:hover, .card-3 button:hover {
+    background-color: var(--accent-color);
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
